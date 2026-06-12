@@ -1,8 +1,9 @@
 
 # Shoping From Hepsibuarada
-//table: src/test/resources/elements.csv
 
 This sepcification for testing login,search and add to cart process in Hepsibuarada.
+
+//table: src/test/resources/elements.csv
 Just for development
 //* important delay for "5" seconds
 
