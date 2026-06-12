@@ -1,0 +1,17 @@
+
+# Search for product <searchKeyword> and verify results
+
+// Navigate the searchbar and enter the search key word
+* Find Element Where "selectorTypeId" is "searchBoxId" then click
+* Move to "defaultMouseX" , "defaultMouseY" then click
+* Find Element Where "selectorTypeId" is "searchBoxId" then click
+* Find Failed Where "selectorTypeCss" is "searchInputCss" then fill with "searchKeyword"
+* Press "enterKey"
+
+// Veryfy Result Page
+* Verify Element where "selectorTypeCss" is "productListCss"
+* Assertion|Verify The Search Response
+
+// Make sure that we have the 5. product
+// first product in the second raw
+* Verify Element where "selectorTypeCss" is "secondRowProductCss"

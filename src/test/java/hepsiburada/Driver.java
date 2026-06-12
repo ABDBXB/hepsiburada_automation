@@ -1,5 +1,7 @@
 package hepsiburada;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thoughtworks.gauge.AfterSuite;
 import com.thoughtworks.gauge.BeforeSuite;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Collections;
 
@@ -15,9 +19,11 @@ public class Driver {
     private ChromeOptions options;
     public static WebDriver driver;
     public static WebDriverWait wait;
+    public static JsonNode elementsNode;
 
     @BeforeSuite
     public void initializeDriver(){
+        // Set Options to pass bot check
         options = new ChromeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
@@ -28,6 +34,15 @@ public class Driver {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            File jsonFile = new File("src/test/resources/elements.json");
+            elementsNode = objectMapper.readTree(jsonFile);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @AfterSuite

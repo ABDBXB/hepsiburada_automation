@@ -967,7 +967,7 @@ org.reflections.ReflectionsException: Could not open url connection
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1516)
-Caused by: java.io.FileNotFoundException: C:\Users\a.basaleh\.jdks\openjdk-26.0.1!\jdk.jartool (Sistem belirtilen yolu bulamýyor)
+Caused by: java.io.FileNotFoundException: C:\Users\a.basaleh\.jdks\openjdk-26.0.1!\jdk.jartool (Sistem belirtilen yolu bulamï¿½yor)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:185)
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
@@ -2680,7 +2680,7 @@ org.reflections.ReflectionsException: Could not open url connection
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1516)
-Caused by: java.io.FileNotFoundException: C:\Users\a.basaleh\.jdks\openjdk-26.0.1!\jdk.jartool (Sistem belirtilen yolu bulamýyor)
+Caused by: java.io.FileNotFoundException: C:\Users\a.basaleh\.jdks\openjdk-26.0.1!\jdk.jartool (Sistem belirtilen yolu bulamï¿½yor)
 	at java.base/java.io.FileInputStream.open0(Native Method)
 	at java.base/java.io.FileInputStream.open(FileInputStream.java:185)
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
@@ -4730,17 +4730,17 @@ either use fromURL(final URL url, final List<UrlType> urlTypes) or use the stati
 [pool-2-thread-1] INFO org.reflections.Reflections - Reflections took 313 ms to scan 144 urls, producing 4665 keys and 19293 values
 [pool-2-thread-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.55 (resolved driver for Chrome 149)
 [pool-2-thread-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\a.basaleh\.cache\selenium\chromedriver\win64\149.0.7827.55\chromedriver.exe
-Haz 11, 2026 4:09:20 ÖS org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Haz 11, 2026 4:09:20 ï¿½S org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 149, returning the closest version; found: 148; Please update to a Selenium version that supports CDP version 149
-{"logLevel":"debug","message":"Executing \u0027Go To {}\u0027 using \u0027class selenium_helper.CustomActions.visitAWebsite"}
-{"logLevel":"debug","message":"Executing \u0027Click On {} by {} on shadow root {}\u0027 using \u0027class selenium_helper.CustomActions.clickInShadowRoot"}
-{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.CustomActions.findElementThenClick"}
-{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.CustomActions.findElementThenClick"}
-{"logLevel":"debug","message":"Executing \u0027Find Failed Where {} is {} then fill with {}\u0027 using \u0027class selenium_helper.CustomActions.findInputThenFill"}
-{"logLevel":"debug","message":"Executing \u0027Find Failed Where {} is {} then fill with {}\u0027 using \u0027class selenium_helper.CustomActions.findInputThenFill"}
-{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.CustomActions.verifyElementExistence"}
-{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.CustomActions.findElementThenClick"}
-{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.CustomActions.verifyElementExistence"}
-{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.CustomActions.verifyElementExistence"}
-{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.CustomActions.findElementThenClick"}
-{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.CustomActions.findElementThenClick"}
+{"logLevel":"debug","message":"Executing \u0027Go To {}\u0027 using \u0027class selenium_helper.InteractionActions.visitAWebsite"}
+{"logLevel":"debug","message":"Executing \u0027Click On {} by {} on shadow root {}\u0027 using \u0027class selenium_helper.InteractionActions.clickInShadowRoot"}
+{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.InteractionActions.findElementThenClick"}
+{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.InteractionActions.findElementThenClick"}
+{"logLevel":"debug","message":"Executing \u0027Find Failed Where {} is {} then fill with {}\u0027 using \u0027class selenium_helper.InteractionActions.findInputThenFill"}
+{"logLevel":"debug","message":"Executing \u0027Find Failed Where {} is {} then fill with {}\u0027 using \u0027class selenium_helper.InteractionActions.findInputThenFill"}
+{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.InteractionActions.verifyElementExistence"}
+{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.InteractionActions.findElementThenClick"}
+{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.InteractionActions.verifyElementExistence"}
+{"logLevel":"debug","message":"Executing \u0027Verify Element where {} is {}\u0027 using \u0027class selenium_helper.InteractionActions.verifyElementExistence"}
+{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.InteractionActions.findElementThenClick"}
+{"logLevel":"debug","message":"Executing \u0027Find Element Where {} is {} then click\u0027 using \u0027class selenium_helper.InteractionActions.findElementThenClick"}

@@ -1,0 +1,19 @@
+
+# Open Hepsiburada and login with <user> and <pass>
+
+// Visit The Website And Accept the cookies
+* Go To "websiteURL"
+* Click On "cookieAcceptButtonId" by "selectorTypeId" on shadow root "cookieShadowRoot"
+
+// Navigate The login Page
+* Find Element Where "selectorTypeId" is "myAccountButtonId" then click
+* Find Element Where "selectorTypeId" is "loginButtonId" then click
+
+// Enter UserName & Password
+* Find Failed Where "selectorTypeId" is "usernameFieldId" then fill with "username"
+* Find Failed Where "selectorTypeId" is "passwordFieldId" then fill with "password"
+* Find Element Where "selectorTypeId" is "loginSubmitButtonId" then click
+
+// Verify that we logged in by checking the acctount button in header
+* Verify Element where "selectorTypeXpath" is "loggedInAccountXpath"
+* Assertion|Verify User Logged In Successfully

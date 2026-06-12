@@ -1,0 +1,47 @@
+{
+  "websiteURL": "https://www.hepsiburada.com/",
+  "cookieAcceptButtonId": "hb-accept-all",
+  "cookieShadowRoot": "efilli-layout-dynamic",
+
+  "myAccountButtonId": "myAccount",
+  "loginButtonId": "login",
+
+  "usernameFieldId": "txtUserName",
+  "username": "cexop66536@alf5.com",
+
+  "passwordFieldId": "txtPassword",
+  "password": "Cexop66536@alf5.com",
+
+  "loginSubmitButtonId": "btnLogin",
+  "loggedInAccountXpath": "//*[@data-test-id='account']",
+
+  "searchKeyword": "bilgisayar",
+  "searchBoxId": "searchBoxOld",
+  "searchInputCss": "input[data-test-id='search-bar-input']",
+  "enterKey": "ENTER",
+
+  "productListCss": "[class*='productListContent']",
+  "secondRowProductCss": "[class*='productListContent'][id='1'] li:nth-of-type(5n)",
+
+  "expectedWindowCount": "2",
+  "productWindowIndex": "2",
+
+  "productTitleXpath": "//*[@data-test-id=\"title\"]",
+  "addToCartButtonCss": "button[data-test-id='addToCart'][kind='primary']",
+  "cartPopupCss": "[class*='checkoutui-SalesFrontCash']",
+
+  "shoppingCartId": "shoppingCart",
+
+  "cartProductNameCss": "[class*='basket_items'] [class*='product_box'] [class*='product_area'] [class*='product_details'] [class*='product_name']",
+  "cartProductVariantCss": "[class*='basket_items'] [class*='product_box'] [class*='product_area'] [class*='product_details'] [class*='product_variant']",
+
+  "productNameStoreKey": "productName",
+  "productVariantStoreKey": "productVariant",
+
+  "defaultMouseX": "0",
+  "defaultMouseY": "0",
+
+  "selectorTypeId": "id",
+  "selectorTypeCss": "css_selector",
+  "selectorTypeXpath": "xpath"
+}
