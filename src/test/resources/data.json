@@ -1,0 +1,136 @@
+[
+  {
+    "key": "websiteURL",
+    "value": "https://www.hepsiburada.com/"
+  },
+  {
+    "key": "cookieAcceptButtonId",
+    "value": "hb-accept-all",
+    "type": "id"
+  },
+  {
+    "key": "cookieShadowRoot",
+    "value": "efilli-layout-dynamic",
+    "type": "id"
+  },
+  {
+    "key": "myAccountButtonId",
+    "value": "myAccount",
+    "type": "id"
+  },
+  {
+    "key": "loginButtonId",
+    "value": "login",
+    "type": "id"
+  },
+  {
+    "key": "usernameFieldId",
+    "value": "txtUserName",
+    "type": "id"
+  },
+  {
+    "key": "username",
+    "value": "gicofe5465@acoxs.com"
+  },
+  {
+    "key": "passwordFieldId",
+    "value": "txtPassword",
+    "type": "id"
+  },
+  {
+    "key": "password",
+    "value": "Gicofe5465@acoxs.com"
+  },
+  {
+    "key": "loginSubmitButtonId",
+    "value": "btnLogin",
+    "type": "id"
+  },
+  {
+    "key": "loggedInAccountXpath",
+    "value": "//*[@data-test-id='account']",
+    "type": "xpath"
+  },
+  {
+    "key": "searchKeyword",
+    "value": "bilgisayar"
+  },
+  {
+    "key": "searchBoxId",
+    "value": "searchBoxOld",
+    "type": "id"
+  },
+  {
+    "key": "searchInputCss",
+    "value": "input[data-test-id='search-bar-input']",
+    "type": "css"
+  },
+  {
+    "key": "enterKey",
+    "value": "ENTER"
+  },
+  {
+    "key": "productListCss",
+    "value": "[class*='productListContent']",
+    "type": "css"
+  },
+  {
+    "key": "secondRowProductCss",
+    "value": "[class*='productListContent'][id='1'] li:nth-of-type(5n)",
+    "type": "css"
+  },
+  {
+    "key": "expectedWindowCount",
+    "value": "2"
+  },
+  {
+    "key": "productWindowIndex",
+    "value": "2"
+  },
+  {
+    "key": "productTitleXpath",
+    "value": "//*[@data-test-id=\"title\"]",
+    "type": "xpath"
+  },
+  {
+    "key": "addToCartButtonCss",
+    "value": "button[data-test-id='addToCart'][kind='primary']",
+    "type": "css"
+  },
+  {
+    "key": "cartPopupCss",
+    "value": "[class*='checkoutui-SalesFrontCash']",
+    "type": "css"
+  },
+  {
+    "key": "shoppingCartId",
+    "value": "shoppingCart",
+    "type": "id"
+  },
+  {
+    "key": "cartProductNameCss",
+    "value": "[class*='basket_items'] [class*='product_box'] [class*='product_area'] [class*='product_details'] [class*='product_name']",
+    "type": "css"
+  },
+  {
+    "key": "cartProductVariantCss",
+    "value": "[class*='basket_items'] [class*='product_box'] [class*='product_area'] [class*='product_details'] [class*='product_variant']",
+    "type": "css"
+  },
+  {
+    "key": "productNameStoreKey",
+    "value": "productName"
+  },
+  {
+    "key": "productVariantStoreKey",
+    "value": "productVariant"
+  },
+  {
+    "key": "defaultMouseX",
+    "value": "0"
+  },
+  {
+    "key": "defaultMouseY",
+    "value": "0"
+  }
+]
