@@ -3,21 +3,20 @@
 
 
 // Add Product To The Cart
-* Find Element Where "selectorTypeCss" is "secondRowProductCss" then click
+* Find Element Where "secondRowProductCss" then click
 * Verify Windows Count Equals To "expectedWindowCount"
 * Assertion|Verify Redirection To Product Page
 * Switch To "productWindowIndex" Window
-* Store Element Text "selectorTypeXpath" "productTitleXpath" as "productNameStoreKey"
-* Find Element Where "selectorTypeCss" is "addToCartButtonCss" then click
-* Verify Element where "selectorTypeCss" is "cartPopupCss"
+* Store Element Text "productTitleXpath" as "productNameStoreKey"
+* Find Element Where "addToCartButtonCss" then click
+* Verify Element "cartPopupCss"
 * Move to "defaultMouseX" , "defaultMouseY" then click
 * Assertion|Verify Product Added To Cart
 
 // Open Cart
-* Find Element Where "selectorTypeId" is "shoppingCartId" then click
-
+* Find Element Where "shoppingCartId" then click
 // Control The Product Inside The Cart
 * Assertion|Verify Product Visible In Cart
-* Verify Element where "selectorTypeCss" is "cartProductNameCss"
-* Verify Element where "selectorTypeCss" is "cartProductVariantCss"
-* Expect "selectorTypeCss" "cartProductNameCss" to contain "productNameStoreKey"
+* Verify Element "cartProductNameCss"
+* Verify Element "cartProductVariantCss"
+* Expect "cartProductNameCss" to contain "productNameStoreKey"

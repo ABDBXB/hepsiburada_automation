@@ -1,7 +1,7 @@
 package selenium_helper;
 
 import com.thoughtworks.gauge.Step;
-import hepsiburada.Driver;
+import driver.Driver;
 import org.jspecify.annotations.NonNull;
 
 import java.util.Set;
@@ -11,15 +11,15 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class NavigationActions {
 
 
-    @Step("Go To <url>")
+    @Step("Go To <>")
     public void visitAWebsite(String url) throws InterruptedException {
-        url = Driver.elementsNode.path(url).asText();
+        url = Driver.elementsNode.get(url).getValue();
         Driver.driver.get(url);
     }
 
     @Step("Verify Windows Count Equals To <number>")
     public void verifyWindowsCount(@NonNull String number) {
-        number = Driver.elementsNode.path(number).asText();
+        number = Driver.elementsNode.get(number).getValue();
         int inputNumber = Integer.parseInt(number);
         Set<String> windows = Driver.driver.getWindowHandles();
         assertThat(windows.size()).isEqualTo(inputNumber).as("Windows Count does not match");
@@ -27,7 +27,7 @@ public class NavigationActions {
 
     @Step("Switch To <number> Window")
     public void switchToWindowByNumber(@NonNull String number) {
-        number = Driver.elementsNode.path(number).asText();
+        number = Driver.elementsNode.get(number).getValue();
         Set<String> windows = Driver.driver.getWindowHandles();
         int windowsCount = windows.size();
         int expectedNumber = Integer.parseInt(number);

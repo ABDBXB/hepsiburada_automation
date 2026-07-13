@@ -1,8 +1,7 @@
 package selenium_helper;
 
 import com.thoughtworks.gauge.Step;
-import com.thoughtworks.gauge.datastore.SuiteDataStore;
-import hepsiburada.Driver;
+import driver.Driver;
 import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,10 +15,10 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class InteractionActions {
 
 
-    @Step("Find Element Where <attribute> is <value> then click")
-    public void findElementThenClick(@NonNull String attribute, String value) {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
+    @Step("Find Element Where <key> then click")
+    public void findElementThenClick(@NonNull String key) {
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
         By selector = getSelectorBy(attribute, value);
 
         WebElement element = Driver.wait.until(ExpectedConditions.elementToBeClickable(selector));
@@ -27,11 +26,13 @@ public class InteractionActions {
 
     }
 
-    @Step("Find Failed Where <attribute> is <value> then fill with <fillWith>")
-    public void findInputThenFill(@NonNull String attribute, String value, String fillWith) {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
-        fillWith = Driver.elementsNode.path(fillWith).asText();
+    @Step("Find Failed <key> then fill with <fillWith>")
+    public void findInputThenFill(@NonNull String key, String fillWith) {
+
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
+        fillWith = Driver.elementsNode.get(fillWith).getValue();
+
         By selector = getSelectorBy(attribute, value);
 
         WebElement element = Driver.wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
@@ -40,11 +41,11 @@ public class InteractionActions {
 
     }
 
-    @Step("Click On <value> by <attribute> on shadow root <shadowRootID>")
-    public void clickInShadowRoot(String value, String attribute, String shadowRootID) throws InterruptedException {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
-        shadowRootID = Driver.elementsNode.path(shadowRootID).asText();
+    @Step("Click On <key> on shadow root <shadowRootID>")
+    public void clickInShadowRoot(String key, String shadowRootID) throws InterruptedException {
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
+        shadowRootID = Driver.elementsNode.get(shadowRootID).getValue();
 
         WebElement shadowHost = Driver.driver.findElement(By.tagName(shadowRootID));
 
@@ -57,8 +58,8 @@ public class InteractionActions {
 
     @Step("Move to <x> , <y> then click")
     public void moveToThenClick(String x, String y) {
-        x = Driver.elementsNode.path(x).asText();
-        y = Driver.elementsNode.path(y).asText();
+        x = Driver.elementsNode.get(x).getValue();
+        y = Driver.elementsNode.get(y).getValue();
 
         Actions pageActions = new Actions(Driver.driver);
         int xOffset = Integer.parseInt(x);
@@ -68,7 +69,7 @@ public class InteractionActions {
 
     @Step("Press <buttonType>")
     public void pressButton(String buttonType) {
-        buttonType = Driver.elementsNode.path(buttonType).asText();
+        buttonType = Driver.elementsNode.get(buttonType).getValue();
         Actions pageActions = new Actions(Driver.driver);
         switch (buttonType.toLowerCase()) {
             case "enter":
@@ -99,6 +100,7 @@ public class InteractionActions {
                 selector = By.xpath(value);
                 break;
             case "css_selector":
+            case "css":
                 selector = By.cssSelector(value);
                 break;
             default:

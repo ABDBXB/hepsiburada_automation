@@ -1,1 +1,1 @@
-var index = {"Tags":{},"Specs":{"Shoping From Hepsibuarada":["specs/example.html"]}};
+var index = {"Tags":{},"Specs":{"Shoping From Hepsibuarada":["specs/SC-001-login-search-cart.html"]}};

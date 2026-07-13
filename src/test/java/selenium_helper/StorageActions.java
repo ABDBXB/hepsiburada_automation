@@ -2,7 +2,7 @@ package selenium_helper;
 
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.datastore.SuiteDataStore;
-import hepsiburada.Driver;
+import driver.Driver;
 import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,11 +17,11 @@ public class StorageActions {
         Thread.sleep(delay);
     }
 
-    @Step("Store Element Text <attribute> <value> as <uniqueKey>")
-    public void storeElementTextAs(@NonNull String attribute, String value, String uniqueKey) {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
-        uniqueKey = Driver.elementsNode.path(uniqueKey).asText();
+    @Step("Store Element Text <key> as <uniqueKey>")
+    public void storeElementTextAs(@NonNull String key, String uniqueKey) {
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
+        uniqueKey = Driver.elementsNode.get(uniqueKey).getValue();
         By selector = InteractionActions.getSelectorBy(attribute, value);
         WebElement element = Driver.wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
 

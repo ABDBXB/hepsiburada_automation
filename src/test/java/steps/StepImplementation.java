@@ -1,6 +1,7 @@
-package hepsiburada;
+package steps;
 
 import com.thoughtworks.gauge.Step;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

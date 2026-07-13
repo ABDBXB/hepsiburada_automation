@@ -2,7 +2,7 @@ package selenium_helper;
 
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.datastore.SuiteDataStore;
-import hepsiburada.Driver;
+import driver.Driver;
 import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,19 +13,19 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class ValidationActions {
 
 
-    @Step("Verify Element where <attribute> is <value>")
-    public void verifyElementExistence(@NonNull String attribute, String value) {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
+    @Step("Verify Element <key>")
+    public void verifyElementExistence(@NonNull String key) {
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
         By selector = InteractionActions.getSelectorBy(attribute, value);
         Driver.wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
     }
 
-    @Step("Expect <attribute> <value> to contain <expectedTextKey>")
-    public void expectContainTexts(@NonNull String attribute, String value, String expectedTextKey) {
-        value = Driver.elementsNode.path(value).asText();
-        attribute = Driver.elementsNode.path(attribute).asText();
-        expectedTextKey = Driver.elementsNode.path(expectedTextKey).asText();
+    @Step("Expect <key> to contain <expectedTextKey>")
+    public void expectContainTexts(@NonNull String key ,String expectedTextKey) {
+        String value = Driver.elementsNode.get(key).getValue();
+        String attribute = Driver.elementsNode.get(key).getType();
+        expectedTextKey = Driver.elementsNode.get(expectedTextKey).getValue();
 
         String expectedTextValue = (String) SuiteDataStore.get(expectedTextKey);
         By selector = InteractionActions.getSelectorBy(attribute, value);
